@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NammaRasteReporter" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/screen_background</item>
+    </style>
+
+    <style name="TextAppearance.NammaRaste.Title" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextAppearance.NammaRaste.HeroMeta" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">#DCEFE9</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.NammaRaste.Section" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.NammaRaste.Body" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="TextAppearance.NammaRaste.BodyStrong" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NammaRastePanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:background">@drawable/panel_background</item>
+    </style>
+
+    <style name="Widget.NammaRaste.PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">14dp</item>
+        <item name="android:minHeight">54dp</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.NammaRaste.SecondaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">14dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="strokeColor">@color/primary</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glowly | Social Chat App</title>
+    <meta
+      name="description"
+      content="Glowly is an Instagram-inspired social chatting application with stories, a creator feed, and direct messages."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-bg" aria-hidden="true">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="grid-glow"></div>
+    </div>
+
+    <main class="app-shell">
+      <aside class="sidebar panel">
+        <a class="brand" href="#feed">
+          <span class="brand-mark">G</span>
+          <div>
+            <strong>Glowly</strong>
+            <span>Social chat app</span>
+          </div>
+        </a>
+
+        <nav class="sidebar-nav" aria-label="Primary">
+          <button class="nav-item is-active" type="button" data-nav-target="feed">
+            <span>Home Feed</span>
+            <small>Discover new posts</small>
+          </button>
+          <button class="nav-item" type="button" data-nav-target="messages">
+            <span>Messages</span>
+            <small>Direct conversations</small>
+          </button>
+          <button class="nav-item" type="button" data-nav-target="explore">
+            <span>Explore</span>
+            <small>Trending creators</small>
+          </button>
+          <button class="nav-item" type="button" data-nav-target="profile">
+            <span>Profile</span>
+            <small>Manage your presence</small>
+          </button>
+        </nav>
+
+        <section class="profile-card">
+          <img src="nikesh-profile.png" alt="Profile avatar" class="avatar avatar-xl" />
+          <div>
+            <h2>@nikesh.builds</h2>
+            <p>Designer, builder, and community host creating clean digital experiences.</p>
+          </div>
+          <div class="profile-stats">
+            <div>
+              <strong>12.4k</strong>
+              <span>Followers</span>
+            </div>
+            <div>
+              <strong>184</strong>
+              <span>Posts</span>
+            </div>
+            <div>
+              <strong>89%</strong>
+              <span>Reply rate</span>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <section class="content-column">
+        <header class="topbar panel">
+          <div>
+            <p class="eyebrow">Today’s mood</p>
+            <h1>Share, scroll, and stay in the conversation.</h1>
+          </div>
+          <div class="topbar-actions">
+            <label class="search-field">
+              <span class="sr-only">Search people or posts</span>
+              <input type="search" placeholder="Search creators, chats, hashtags" data-search-input />
+            </label>
+            <button class="primary-button" type="button" data-open-composer>New Post</button>
+          </div>
+        </header>
+
+        <section class="stories panel" id="feed">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Stories</p>
+              <h2>People you want to keep up with</h2>
+            </div>
+            <button class="ghost-button" type="button">Watch all</button>
+          </div>
+
+          <div class="story-row">
+            <button class="story-card story-create" type="button">
+              <span class="story-add">+</span>
+              <strong>Create</strong>
+              <small>Your story</small>
+            </button>
+            <button class="story-card is-live" type="button">
+              <img src="nikesh-profile.png" alt="Aarav story avatar" class="avatar avatar-story" />
+              <strong>Aarav</strong>
+              <small>Live now</small>
+            </button>
+            <button class="story-card" type="button">
+              <img src="nikesh-profile.png" alt="Mira story avatar" class="avatar avatar-story" />
+              <strong>Mira</strong>
+              <small>22m ago</small>
+            </button>
+            <button class="story-card" type="button">
+              <img src="nikesh-profile.png" alt="Ishita story avatar" class="avatar avatar-story" />
+              <strong>Ishita</strong>
+              <small>1h ago</small>
+            </button>
+            <button class="story-card" type="button">
+              <img src="nikesh-profile.png" alt="Kabir story avatar" class="avatar avatar-story" />
+              <strong>Kabir</strong>
+              <small>3h ago</small>
+            </button>
+          </div>
+        </section>
+
+        <section class="composer panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Quick post</p>
+              <h2>What are you sharing today?</h2>
+            </div>
+          </div>
+
+          <form class="composer-form" data-post-form>
+            <div class="composer-input-wrap">
+              <img src="nikesh-profile.png" alt="Your avatar" class="avatar avatar-lg" />
+              <textarea
+                name="caption"
+                rows="3"
+                maxlength="220"
+                placeholder="Drop a project update, a photo idea, or a thought for your followers..."
+                required
+              ></textarea>
+            </div>
+            <div class="composer-actions">
+              <div class="chip-row">
+                <button class="chip" type="button">Photo</button>
+                <button class="chip" type="button">Reel</button>
+                <button class="chip" type="button">Poll</button>
+              </div>
+              <button class="primary-button" type="submit">Publish</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="feed-list" data-post-list>
+          <article class="post-card panel" data-search-text="workspace setup minimal design creator">
+            <header class="post-header">
+              <div class="user-lockup">
+                <img src="nikesh-profile.png" alt="Mira avatar" class="avatar avatar-lg" />
+                <div>
+                  <strong>Mira Sethi</strong>
+                  <p>@mirasethi.design • 18 min ago</p>
+                </div>
+              </div>
+              <button class="ghost-icon" type="button" aria-label="More options">•••</button>
+            </header>
+            <div class="post-media gradient-papaya">
+              <div class="media-copy">
+                <span class="tag">Workspace story</span>
+                <h3>Soft light, strong coffee, and a cleaner desk before the sprint.</h3>
+              </div>
+            </div>
+            <div class="post-body">
+              <p>
+                Rebuilt my design corner around focus instead of clutter. Tiny rituals really do change how the day feels.
+              </p>
+              <div class="post-metrics">
+                <span>2,483 likes</span>
+                <span>184 comments</span>
+                <span>Saved by 940 people</span>
+              </div>
+            </div>
+            <div class="post-actions">
+              <button class="social-action" type="button" data-like-button data-liked="false">
+                <span>♡</span>
+                <strong>Like</strong>
+              </button>
+              <button class="social-action" type="button">
+                <span>◌</span>
+                <strong>Comment</strong>
+              </button>
+              <button class="social-action" type="button">
+                <span>↗</span>
+                <strong>Share</strong>
+              </button>
+              <button class="social-action" type="button" data-save-button data-saved="false">
+                <span>⌑</span>
+                <strong>Save</strong>
+              </button>
+            </div>
+          </article>
+
+          <article class="post-card panel" data-search-text="travel vlog creator city reel motion">
+            <header class="post-header">
+              <div class="user-lockup">
+                <img src="nikesh-profile.png" alt="Kabir avatar" class="avatar avatar-lg" />
+                <div>
+                  <strong>Kabir Jain</strong>
+                  <p>@kabir.mov • 43 min ago</p>
+                </div>
+              </div>
+              <button class="ghost-icon" type="button" aria-label="More options">•••</button>
+            </header>
+            <div class="post-media gradient-indigo">
+              <div class="media-copy">
+                <span class="tag">Reel drop</span>
+                <h3>Shot the city after rain and stitched it into a 12-second mood reel.</h3>
+              </div>
+            </div>
+            <div class="post-body">
+              <p>
+                Testing a grittier grade and stronger cuts. The comments are split, which usually means I should keep going.
+              </p>
+              <div class="post-metrics">
+                <span>4,912 likes</span>
+                <span>301 comments</span>
+                <span>Shared 1,100 times</span>
+              </div>
+            </div>
+            <div class="post-actions">
+              <button class="social-action" type="button" data-like-button data-liked="true">
+                <span>♥</span>
+                <strong>Liked</strong>
+              </button>
+              <button class="social-action" type="button">
+                <span>◌</span>
+                <strong>Comment</strong>
+              </button>
+              <button class="social-action" type="button">
+                <span>↗</span>
+                <strong>Share</strong>
+              </button>
+              <button class="social-action" type="button" data-save-button data-saved="false">
+                <span>⌑</span>
+                <strong>Save</strong>
+              </button>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <aside class="chat-column">
+        <section class="messages panel" id="messages">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Direct messages</p>
+              <h2>Recent conversations</h2>
+            </div>
+            <button class="ghost-button" type="button">Requests</button>
+          </div>
+
+          <div class="chat-list" role="tablist" aria-label="Chats">
+            <button class="chat-item is-active" type="button" data-chat-target="mira">
+              <img src="nikesh-profile.png" alt="Mira avatar" class="avatar avatar-md" />
+              <div>
+                <strong>Mira</strong>
+                <p>Sending the color studies now.</p>
+              </div>
+              <span>2m</span>
+            </button>
+            <button class="chat-item" type="button" data-chat-target="kabir">
+              <img src="nikesh-profile.png" alt="Kabir avatar" class="avatar avatar-md" />
+              <div>
+                <strong>Kabir</strong>
+                <p>That reel cover is clean.</p>
+              </div>
+              <span>14m</span>
+            </button>
+            <button class="chat-item" type="button" data-chat-target="ishita">
+              <img src="nikesh-profile.png" alt="Ishita avatar" class="avatar avatar-md" />
+              <div>
+                <strong>Ishita</strong>
+                <p>Can we co-host tomorrow?</p>
+              </div>
+              <span>1h</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="conversation panel" data-conversation-panel>
+          <header class="conversation-head">
+            <div class="user-lockup">
+              <img src="nikesh-profile.png" alt="Conversation avatar" class="avatar avatar-lg" />
+              <div>
+                <strong data-chat-name>Mira</strong>
+                <p data-chat-status>Active now</p>
+              </div>
+            </div>
+            <button class="ghost-icon" type="button" aria-label="Call">⌁</button>
+          </header>
+
+          <div class="message-thread" data-message-thread></div>
+
+          <form class="message-form" data-message-form>
+            <input type="text" name="message" placeholder="Type a message" maxlength="180" required />
+            <button class="primary-button" type="submit">Send</button>
+          </form>
+        </section>
+
+        <section class="panel explore-card" id="explore">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Explore</p>
+              <h2>Trending right now</h2>
+            </div>
+          </div>
+          <div class="trend-list">
+            <div class="trend-item">
+              <strong>#DeskReset</strong>
+              <span>19.2k posts today</span>
+            </div>
+            <div class="trend-item">
+              <strong>#CreatorNotes</strong>
+              <span>Designers are sharing process dumps</span>
+            </div>
+            <div class="trend-item">
+              <strong>#LateNightBuild</strong>
+              <span>Developers posting live progress</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel mini-profile" id="profile">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Profile view</p>
+              <h2>Growth snapshot</h2>
+            </div>
+          </div>
+          <div class="growth-grid">
+            <div>
+              <strong>+1.8k</strong>
+              <span>New followers this week</span>
+            </div>
+            <div>
+              <strong>92%</strong>
+              <span>Message response streak</span>
+            </div>
+            <div>
+              <strong>31k</strong>
+              <span>Total reach in 7 days</span>
+            </div>
+            <div>
+              <strong>7</strong>
+              <span>Brand collabs in review</span>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

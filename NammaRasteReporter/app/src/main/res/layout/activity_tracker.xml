@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hero_background"
+            android:orientation="vertical"
+            android:paddingStart="22dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="22dp"
+            android:paddingBottom="28dp">
+
+            <TextView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/status_pill"
+                android:text="@string/back_to_report"
+                android:textColor="@color/primary_dark"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/status_tracker"
+                android:textAppearance="@style/TextAppearance.NammaRaste.Title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/status_tracker_tagline"
+                android:textAppearance="@style/TextAppearance.NammaRaste.HeroMeta" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                style="@style/NammaRastePanel"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/latest_reports"
+                    android:textAppearance="@style/TextAppearance.NammaRaste.Section" />
+
+                <TextView
+                    android:id="@+id/reportCountText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="@style/TextAppearance.NammaRaste.Body" />
+
+                <TextView
+                    android:id="@+id/latestTicketText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/status_pill"
+                    android:textAppearance="@style/TextAppearance.NammaRaste.BodyStrong" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/openMapButton"
+                    style="@style/Widget.NammaRaste.PrimaryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/open_map_view" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/NammaRastePanel"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_ticket_status"
+                    android:textAppearance="@style/TextAppearance.NammaRaste.Section" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/ticket_id">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ticketInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/trackButton"
+                    style="@style/Widget.NammaRaste.PrimaryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/check_status"
+                    app:icon="@drawable/ic_search"
+                    app:iconGravity="textStart"
+                    app:iconPadding="10dp" />
+
+                <TextView
+                    android:id="@+id/ticketResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/result_box"
+                    android:text="@string/enter_ticket_to_track"
+                    android:textAppearance="@style/TextAppearance.NammaRaste.Body" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/NammaRastePanel"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/admin_status_update"
+                    android:textAppearance="@style/TextAppearance.NammaRaste.Section" />
+
+                <LinearLayout
+                    android:id="@+id/adminLoginPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/admin_login_hint"
+                        android:textAppearance="@style/TextAppearance.NammaRaste.Body" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/admin_id">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/adminIdInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/admin_password">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/adminPasswordInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/adminLoginButton"
+                        style="@style/Widget.NammaRaste.PrimaryButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/admin_login" />
+
+                    <TextView
+                        android:id="@+id/adminLoginResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/result_box"
+                        android:text="@string/admin_login_required"
+                        android:textAppearance="@style/TextAppearance.NammaRaste.Body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adminControlsPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/admin_logged_in"
+                            android:textAppearance="@style/TextAppearance.NammaRaste.BodyStrong" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/adminLogoutButton"
+                            style="@style/Widget.NammaRaste.SecondaryButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="88dp"
+                            android:text="@string/logout" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/ticket_id">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/adminTicketInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapCharacters" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/status">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/statusUpdateInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/updateStatusButton"
+                        style="@style/Widget.NammaRaste.PrimaryButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/update_status" />
+
+                    <TextView
+                        android:id="@+id/adminStatusResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/result_box"
+                        android:text="@string/admin_status_hint"
+                        android:textAppearance="@style/TextAppearance.NammaRaste.Body" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/NammaRastePanel"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/all_reports"
+                        android:textAppearance="@style/TextAppearance.NammaRaste.Section" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/clearReportsButton"
+                        style="@style/Widget.NammaRaste.SecondaryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="88dp"
+                        android:text="@string/clear" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/allReportsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

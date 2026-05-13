@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="screen_background">#EEF4F7</color>
+    <color name="panel_background">#FFFFFF</color>
+    <color name="preview_background">#16201B</color>
+    <color name="primary">#0B6B53</color>
+    <color name="primary_dark">#064335</color>
+    <color name="accent">#F4B63E</color>
+    <color name="accent_deep">#D97828</color>
+    <color name="info_blue">#2A6FDB</color>
+    <color name="success_soft">#DDF5E9</color>
+    <color name="text_primary">#10211C</color>
+    <color name="text_secondary">#5B6B66</color>
+    <color name="white">#FFFFFF</color>
+</resources>

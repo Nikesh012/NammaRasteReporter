@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Portal | Northstar Goods India</title>
+    <meta
+      name="description"
+      content="Vendor portal for Northstar Goods India to log in and manage storefront products."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-noise" aria-hidden="true"></div>
+    <div class="page-shell vendor-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html">Northstar Goods India</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html">Storefront</a>
+          <a href="#vendor-login">Vendor Login</a>
+          <a href="#vendor-dashboard">Dashboard</a>
+        </nav>
+        <span class="vendor-badge">Vendor Portal</span>
+      </header>
+
+      <main class="vendor-main">
+        <section class="vendor-hero reveal">
+          <div>
+            <p class="eyebrow">Backend access</p>
+            <h1>Manage products behind your storefront.</h1>
+            <p class="hero-text">
+              Log in as a vendor, add products, review the live catalog, and keep the customer-facing shop updated from one place.
+            </p>
+          </div>
+          <div class="vendor-tip-card">
+            <p class="card-tag">Demo credentials</p>
+            <strong>Email</strong>
+            <span>vendor@northstar.in</span>
+            <strong>Password</strong>
+            <span>admin123</span>
+          </div>
+        </section>
+
+        <section class="vendor-layout">
+          <section class="vendor-auth-card reveal" id="vendor-login">
+            <p class="section-tag">Vendor Login</p>
+            <h2>Sign in to manage products</h2>
+            <form class="vendor-form" data-login-form>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="vendor@northstar.in" required />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" name="password" placeholder="Enter password" required />
+              </label>
+              <button class="button button-primary" type="submit">Login</button>
+              <p class="form-message" data-login-message></p>
+            </form>
+          </section>
+
+          <section class="vendor-dashboard reveal" id="vendor-dashboard" data-dashboard hidden>
+            <div class="vendor-dashboard-head">
+              <div>
+                <p class="section-tag">Product Manager</p>
+                <h2>Add new products to the shop</h2>
+              </div>
+              <div class="vendor-head-actions">
+                <a class="button button-secondary" href="index.html">View customer site</a>
+                <button class="button button-secondary" type="button" data-reset-products>Reset defaults</button>
+                <button class="button button-primary" type="button" data-logout>Logout</button>
+              </div>
+            </div>
+
+            <div class="vendor-dashboard-grid">
+              <form class="vendor-form vendor-product-form" data-product-form>
+                <label>
+                  <span>Product name</span>
+                  <input type="text" name="name" placeholder="Example: Studio Table Lamp" required />
+                </label>
+                <label>
+                  <span>Category</span>
+                  <select name="category" required>
+                    <option value="home">Home</option>
+                    <option value="tech">Tech</option>
+                    <option value="travel">Travel</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Label</span>
+                  <input type="text" name="label" placeholder="Example: Lighting" required />
+                </label>
+                <label>
+                  <span>Price in rupees</span>
+                  <input type="number" min="1" name="price" placeholder="2999" required />
+                </label>
+                <label>
+                  <span>Visual style</span>
+                  <select name="gradient" required>
+                    <option value="gradient-peach">Peach</option>
+                    <option value="gradient-blue">Blue</option>
+                    <option value="gradient-olive">Olive</option>
+                    <option value="gradient-amber">Amber</option>
+                    <option value="gradient-moss">Moss</option>
+                    <option value="gradient-stone">Stone</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Product picture</span>
+                  <input type="file" name="imageFile" accept="image/*" data-image-input />
+                </label>
+                <div class="vendor-image-preview" data-image-preview>
+                  <span>No image selected yet</span>
+                </div>
+                <label class="full-span">
+                  <span>Description</span>
+                  <textarea name="description" rows="5" placeholder="Write a short product description" required></textarea>
+                </label>
+                <button class="button button-primary" type="submit">Add product</button>
+                <p class="form-message" data-product-message></p>
+              </form>
+
+              <section class="vendor-products-panel">
+                <div class="vendor-products-head">
+                  <div>
+                    <p class="section-tag">Live Catalog</p>
+                    <h3>Products in the storefront</h3>
+                  </div>
+                  <span class="catalog-count" data-product-count>0 products</span>
+                </div>
+                <div class="vendor-products-list" data-vendor-products></div>
+              </section>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="store-data.js"></script>
+    <script src="vendor.js"></script>
+  </body>
+</html>

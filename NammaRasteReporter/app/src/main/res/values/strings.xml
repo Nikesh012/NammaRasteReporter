@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Namma-Raste Reporter</string>
+    <string name="app_tagline">One-click infrastructure reports for potholes and broken streetlights.</string>
+    <string name="login_title">Citizen Login</string>
+    <string name="login_subtitle">Enter your name to start reporting road issues.</string>
+    <string name="your_name">Your name</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="logged_in_as">Logged in as %1$s</string>
+    <string name="logged_out">Logged out successfully</string>
+    <string name="enter_valid_name">Enter at least 3 characters</string>
+    <string name="capture_report">Capture Report</string>
+    <string name="issue_type">Issue type</string>
+    <string name="choose_issue_type">What are you capturing?</string>
+    <string name="severity">Severity</string>
+    <string name="description">Description</string>
+    <string name="capture_and_submit">Capture Photo and Submit</string>
+    <string name="capture">Capture</string>
+    <string name="waiting_for_report">Capture a photo to generate a ticket.</string>
+    <string name="status_tracker">Status Tracker</string>
+    <string name="status_tracker_home_text">Track submitted tickets on a separate page.</string>
+    <string name="open_status_tracker">Open Status Tracker</string>
+    <string name="reports">Reports</string>
+    <string name="status_tracker_tagline">Enter your ticket ID and view the latest report progress.</string>
+    <string name="back_to_report">Back to report</string>
+    <string name="latest_reports">Latest Reports</string>
+    <string name="open_map_view">Open Map View</string>
+    <string name="map_view">Map View</string>
+    <string name="back_to_reports">Back to reports</string>
+    <string name="no_location_reports">No reports with GPS location yet.</string>
+    <string name="map_view_note">Map View plots all saved reports that have GPS coordinates. Orange = pothole, blue = streetlight.</string>
+    <string name="pothole_label">Pothole</string>
+    <string name="streetlight_label">Streetlight</string>
+    <string name="all_reports">All Reports</string>
+    <string name="check_ticket_status">Check Ticket Status</string>
+    <string name="ticket_id">Ticket ID</string>
+    <string name="check_status">Check Status</string>
+    <string name="admin_status_update">Admin Status Update</string>
+    <string name="admin_id">Admin ID</string>
+    <string name="admin_password">Admin Password</string>
+    <string name="admin_login">Admin Login</string>
+    <string name="admin_login_hint">Login as admin to change report status.</string>
+    <string name="admin_login_required">Admin login required to update status.</string>
+    <string name="admin_logged_in">Admin logged in</string>
+    <string name="invalid_admin_login">Invalid admin ID or password.</string>
+    <string name="status">Status</string>
+    <string name="choose_status">Choose a status</string>
+    <string name="update_status">Update Status</string>
+    <string name="admin_status_hint">Enter a ticket ID and update its status.</string>
+    <string name="status_updated">Ticket %1$s updated to %2$s.</string>
+    <string name="clear">Clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear_all_reports">Clear All Reports</string>
+    <string name="clear_all_reports_confirm">This will delete all saved reports and their photos from this app.</string>
+    <string name="enter_ticket_to_track">Enter a ticket ID to see progress.</string>
+    <string name="enter_ticket_id">Enter a ticket ID</string>
+    <string name="ticket_not_found">No report found for this ticket ID.</string>
+    <string name="ticket_result">Ticket: %1$s\nType: %2$s\nSeverity: %3$s\nDescription: %4$s\nStatus: %5$s\nSubmitted: %6$s</string>
+    <string name="report_card">Ticket: %1$s\nType: %2$s\nSeverity: %3$s\nDescription: %4$s\nStatus: %5$s\nSubmitted: %6$s\nPhoto: %7$s</string>
+    <string name="report_photo">Report photo</string>
+    <string name="issue_type_storage_hint">Choose Pothole or Broken Streetlight before capture. Photos are saved separately.</string>
+    <string name="submission_success">Submitted ticket %1$s\nType: %2$s\nDescription: %3$s\nSaved folder: reports/%4$s\nLocation: %5$s</string>
+    <string name="no_description">No description</string>
+    <string name="location_unavailable">Location unavailable</string>
+    <string name="no_reports_yet">No reports yet</string>
+    <string name="camera_permission_required">Camera permission is required to capture reports.</string>
+    <string name="camera_not_ready">Camera is not ready yet.</string>
+    <string name="capture_failed">Photo capture failed.</string>
+
+    <plurals name="report_count">
+        <item quantity="one">%d report saved locally</item>
+        <item quantity="other">%d reports saved locally</item>
+    </plurals>
+
+    <plurals name="reports_cleared">
+        <item quantity="one">%d report cleared</item>
+        <item quantity="other">%d reports cleared</item>
+    </plurals>
+
+    <plurals name="map_report_count">
+        <item quantity="one">%d report shown on map</item>
+        <item quantity="other">%d reports shown on map</item>
+    </plurals>
+</resources>
