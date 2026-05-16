@@ -1,20 +1,12 @@
-# Portfolio Starter
+The **Namma-Raste Reporter** is a rapid-response mobile application developed as part of the MindMatrix VTU Internship Program with the vision of creating safer and smarter roads through active citizen participation. The application acts as a digital infrastructure reporting tool that enables citizens to instantly report road-related issues such as potholes and broken streetlights using a single tap. By bridging the communication gap between the public and local maintenance authorities, the app ensures that infrastructure problems are identified and addressed more efficiently. The application automatically captures the GPS location and timestamp at the moment of reporting and generates a unique Ticket ID for tracking purposes, thereby eliminating the need for manual data entry and simplifying the reporting process.
 
-This is a simple portfolio website built with plain HTML, CSS, and JavaScript.
+The application includes several important functional features designed for ease of use and quick reporting. Through the Capture Mode, users can open the camera using the CameraX API, take a photograph of the issue, and select the type of problem, either a pothole or a broken streetlight. Once the image is captured, the application automatically records the exact GPS coordinates and timestamp using Android’s FusedLocationProviderClient. Every report is assigned a unique, non-repeating Ticket ID which is stored in a local Room database for offline persistence and future reference. The app also contains a Status Tracker module where users can enter their Ticket ID to check the current status of the complaint, such as Submitted, In Progress, or Resolved. In addition, a simple user authentication system is included to prevent spam submissions and ensure that reports are associated with verified citizens.
 
-## Files
+The technical development of the application follows the MVVM (Model-View-ViewModel) architecture pattern, which ensures proper separation between the user interface, business logic, and data handling layers. The application is developed using Kotlin and Jetpack Compose to create a modern and responsive user interface. Camera functionality is implemented using the CameraX API for real-time image preview and photo capture, while reactive UI updates are handled through LiveData or Kotlin Flow. For local data storage, Room Database is used to store reports, Ticket IDs, images, and user-related information even when the device is offline. The application also supports optional cloud synchronization using Firebase Firestore or Firebase Realtime Database for sharing reports directly with authorities and enabling centralized monitoring.
 
-- `index.html` - page structure and content
-- `styles.css` - visual design and responsive layout
-- `script.js` - small reveal animations
+The Room database schema contains important fields required for maintaining complete report details. Each report entry stores a unique ticket ID, issue type, image file path, GPS latitude and longitude, timestamp, report status, and the logged-in user’s ID. The user workflow of the application is designed to be simple and efficient. Initially, the user launches the app and logs in to access the home screen, which displays recent reports and a Capture button. After tapping the Capture option, the camera preview opens, allowing the user to take a photograph of the issue. The user then selects the issue type from a bottom sheet overlay. The application automatically submits the report by recording the GPS coordinates and timestamp, storing the information in the Room database, and displaying the generated Ticket ID. Users can later use this Ticket ID in the Status Tracker to monitor the progress of their complaint.
 
-## Customize
+The success of the project is evaluated based on several important criteria. The application must generate and save a report in the Room database within fewer than three user interactions to ensure speed and simplicity. Each Ticket ID must be unique and non-repeating for reliable tracking. The CameraX preview should function smoothly without lag or distortion, especially on mid-range Android devices. GPS coordinates must accurately reflect the user’s real-time location during report submission. The project also follows standard Kotlin coding conventions such as camelCase for variables and PascalCase for classes, along with proper documentation for the Room database schema and Ticket ID generation logic.
 
-1. Replace `Nikesh` with your name.
-2. Update the hero text and about section with your story.
-3. Replace the sample projects with your real work.
-4. Add your real email, GitHub, and LinkedIn links.
+The Namma-Raste Reporter project aims to create a positive social impact by improving road safety, supporting smart city and smart village initiatives, and increasing government efficiency through accurate GPS-based issue reporting with photographic evidence. Most importantly, the project empowers citizens to actively participate in maintaining and improving their local infrastructure, thereby promoting community ownership and public responsibility.
 
-## Open the site
-
-Open `index.html` in your browser to view the portfolio.
